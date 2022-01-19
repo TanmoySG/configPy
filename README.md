@@ -10,6 +10,9 @@ Will be Publised soon on `PyPi`. Installation instruction and documentation will
 
 Use configPy to get your configurations imported to your python code from JSON File.
 
+
+### `JSONConfigParser` - for JSON Configuration Files
+
 Import the `JSONConfigParser` object from configPy module.
 ```
 from config import JSONConfigParser
