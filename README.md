@@ -2,16 +2,16 @@
 
 A tiny Configuration File Parser for Python Projects. Currently Supports JSON files only. 
 
-## Installation
+# Installation
 
 Will be Publised soon on `PyPi`. Installation instruction and documentation will be updated soon.
 
-## Usage 
+# Usage 
 
 Use configPy to get your configurations imported to your python code from JSON File.
 
 
-### `JSONConfigParser` - for JSON Configuration Files
+## `JSONConfigParser` - for JSON Configuration Files
 
 Import the `JSONConfigParser` object from configPy module.
 ```
@@ -33,6 +33,6 @@ print("Purpose: ", importedConfigs["purpose"])
 
 The whole code for the above example can be found [here](./examples/sample_jsonConfig.py).
 
-## Examples
+# Examples
 
 Usage Samples can be found in the [examples directory](./examples)
