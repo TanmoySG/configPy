@@ -4,23 +4,26 @@ A tiny Configuration File Parser for Python Projects. Currently Supports JSON fi
 
 ## Installation
 
-Will be Publised soon on `PyPi`. Installation instruction and documentation will be updated soon.
+Install the Latest Stable Build - v0.0.7-Testing Build 
+```
+pip install configParsePy
+```
 
 ## Usage 
 
 Use configPy to get your configurations imported to your python code from JSON File.
 
+Import the `configPy` object from configPy module.
+```
+from configPy import configPy 
+```
 
 ### `JSONConfigParser` - for JSON Configuration Files
 
-Import the `JSONConfigParser` object from configPy module.
-```
-from configPy import JSONConfigParser
-```
 
 Initiate the `JSONConfigParser` by passing the JSON config file. Use `getConfigurations()` method to get the Configuration. `The getConfigurations()` method returns the configurations as a Dictionary.
 ```
-importedConfigs = JSONConfigParser(configFilePath="./sampleConfig.json").getConfigurations()
+importedConfigs = configPy.JSONConfigParser(configFilePath="./sampleConfig.json").getConfigurations()
 ```
 
 Use the configurations as a `dict` object.
