@@ -1,7 +1,6 @@
 from config import JSONConfigParser
 
-importedConfigs = JSONConfigParser(
-    configFilePath="./sampleConfig.json").getConfigurations()
+importedConfigs = JSONConfigParser(configFilePath="./sampleConfig.json").getConfigurations()
 
 print("Sample JSONConfigParser Test")
 
