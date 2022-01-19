@@ -15,7 +15,7 @@ Use configPy to get your configurations imported to your python code from JSON F
 
 Import the `JSONConfigParser` object from configPy module.
 ```
-from config import JSONConfigParser
+from configPy import JSONConfigParser
 ```
 
 Initiate the `JSONConfigParser` by passing the JSON config file. Use `getConfigurations()` method to get the Configuration. `The getConfigurations()` method returns the configurations as a Dictionary.
