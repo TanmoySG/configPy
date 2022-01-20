@@ -1,4 +1,3 @@
-import json
 import os
 
 # Check if File Exists
@@ -6,14 +5,19 @@ def ifFileExists(filePath) -> bool:
     return os.path.exists(filePath)
 
 
-# JSONConfigParser Class - for JSON Files
+# TXTConfigParser Class - for TXT Files
 class TXTConfigParser:
 
-    # init method to initialize JSONConfigParser 
+    # init method to initialize TXTConfigParser 
     # with file path when an object is created.
 
     def __init__(self, configFilePath) -> None:
         self.configurations = {"file_type" : "TXT", "input" : configFilePath}
+
+        # Usage Mechanism TBD 
+
+        # Sample Code -
+
         # if ifFileExists(configFilePath):
         #     self.configFilePath = configFilePath
         #     self.configurations = {}
