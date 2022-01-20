@@ -1,4 +1,4 @@
-from config import JSONConfigParser
+from configPy import JSONConfigParser
 
 importedConfigs = JSONConfigParser(configFilePath="./sampleConfig.json").getConfigurations()
 
