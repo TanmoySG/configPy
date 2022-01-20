@@ -1,6 +1,12 @@
 # Changelog
 
-## v0.0.7 [Latest Stable Testing Build]
+## v0.0.8 [Latest Stable Build]
+
+Improved usability and importability from v0.0.7
+
+Resolved Issue [#6](https://github.com/TanmoySG/configPy/issues/6)
+
+## v0.0.7 [Stable Testing Build]
 
 v0.0.7 is the stable build for configPy. It is still unpolished and requires breaking changes and better usability. 
 
