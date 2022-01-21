@@ -25,9 +25,9 @@ Initiate the `JSONConfigParser` by passing the JSON config file. Use `getConfigu
 ```
 configObject = JSONConfigParser(configFilePath="./sampleConfig.json")
 configurations = configObject.getConfigurations()
-
-OR 
-
+```
+Or as
+```
 configurations = JSONConfigParser(configFilePath="./sampleConfig.json").getConfigurations()
 ```
 
