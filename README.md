@@ -37,7 +37,7 @@ print("Module Name: ", importedConfigs["module_name"])
 print("Purpose: ", importedConfigs["purpose"])
 ```
 
-The whole code for the above example can be found [here](./examples/jsonConfig_EXAMPLE.py).
+The whole code for the above example can be found [here](https://github.com/TanmoySG/configPy/blob/main/examples/jsonConfig_EXAMPLE.py).
 
 ## Examples
 
