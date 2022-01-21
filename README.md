@@ -4,7 +4,7 @@ A tiny Configuration File Parser for Python Projects. Currently Supports JSON fi
 
 ## Installation
 
-Install the Latest Stable Build - v0.0.7-Testing Build 
+Install the Latest Stable Build using 
 ```
 pip install configParsePy
 ```
