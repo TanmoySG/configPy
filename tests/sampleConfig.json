@@ -1,0 +1,5 @@
+{
+    "module_name" : "configPy",
+    "purpose" : "A Tiny Configuration File Parser for Python Projects",
+    "testResult" : "Passed"
+}
