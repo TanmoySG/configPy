@@ -61,7 +61,7 @@ jobs:
           
     - name: Commit Bumped Version
       run: |
-          cd ..
+          git add utilities/version.json
           git config --global user.name 'Tanmoy Sen Gupta'
           git config --global user.email 'tanmoysg@users.noreply.github.com'
           git commit -m "Bumped Version Up"
