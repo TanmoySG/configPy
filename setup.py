@@ -1,11 +1,19 @@
+import json
+import sys
 from setuptools import setup, find_packages
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
+def getVersion(repo)->str:
+    with open("./utilities/version.json", "r") as verFile:
+        versions = json.load(verFile)
+
+    return versions[repo]
+
 setup(
     name='configParsePy',
-    version='0.0.8',
+    version=getVersion(repo=sys.argv[1]),
     author='Tanmoy Sen Gupta',
     author_email='tanmoysps@gmail.com',
     url='https://github.com/TanmoySG/configPy',

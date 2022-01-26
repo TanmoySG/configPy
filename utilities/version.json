@@ -1,4 +1,5 @@
 {
-    "test-pypi-version" : "0.0.1",
-    "pypi-version" : "0.0.8"
+    "test-pypi" : "0.0.1",
+    "pypi" : "0.0.8",
+    "history":[]
 }
