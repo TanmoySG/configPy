@@ -13,7 +13,7 @@ def getVersion(repo)->str:
 
 setup(
     name='configParsePy',
-    version=getVersion(repo=sys.argv[1]),
+    version=getVersion(repo=sys.argv[-1]),
     author='Tanmoy Sen Gupta',
     author_email='tanmoysps@gmail.com',
     url='https://github.com/TanmoySG/configPy',
@@ -33,9 +33,9 @@ setup(
     zip_safe=False
 )
 
-```
+'''
 [Usage]
 
-python setup.py [test-pypi/pypi]
+python setup.py sdist bdist_wheel [test-pypi/pypi]
 
-```
+'''
