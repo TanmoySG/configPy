@@ -22,7 +22,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     # Runs a single command using the runners shell
     - name: Setup Python
       uses: actions/setup-python@v2.3.1
@@ -43,7 +43,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     # Runs a single command using the runners shell
     - name: Setup Python
       uses: actions/setup-python@v2.3.1
@@ -65,7 +65,7 @@ jobs:
           git config --global user.name 'Tanmoy Sen Gupta'
           git config --global user.email 'tanmoysg@users.noreply.github.com'
           git commit -m "Bumped Version Up"
-          git push
+          git push  
           
           
   # This workflow contains a single job called "build"
