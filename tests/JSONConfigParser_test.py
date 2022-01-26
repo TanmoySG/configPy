@@ -20,9 +20,6 @@ class JSONConfigParserTestCase(unittest.TestCase):
     # Raises 'FileNotFoundError' Exception when file doesn't exist
     def test_JSONConfigParser_fileMissingCase(self):
         self.assertRaises(FileNotFoundError, JSONConfigParser, "./samplConfig.json" )
-
-    def test_Another(self):
-        self.assertEqual(True, False)
         
 if __name__ == '__main__':
     unittest.main()
