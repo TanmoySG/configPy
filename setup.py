@@ -32,3 +32,10 @@ setup(
     install_requires=[],
     zip_safe=False
 )
+
+```
+[Usage]
+
+python setup.py [test-pypi/pypi]
+
+```
