@@ -1,6 +1,16 @@
 import json
 import sys
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages, Command
+
+repository = ""
+
+if "--pypi" in sys.argv:
+    repository = "pypi"
+    sys.argv.remove("--pypi")
+
+if "--test-pypi" in sys.argv:
+    repository = "test-pypi"
+    sys.argv.remove("--test-pypi")
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -13,7 +23,7 @@ def getVersion(repo)->str:
 
 setup(
     name='configParsePy',
-    version=getVersion(repo=sys.argv[-1]),
+    version=getVersion(repository),
     author='Tanmoy Sen Gupta',
     author_email='tanmoysps@gmail.com',
     url='https://github.com/TanmoySG/configPy',
@@ -36,6 +46,6 @@ setup(
 '''
 [Usage]
 
-python setup.py sdist bdist_wheel [test-pypi/pypi]
+python setup.py sdist bdist_wheel [--test-pypi / --pypi]
 
 '''
