@@ -1,7 +1,5 @@
 {
     "test-pypi": "0.0.9",
     "pypi": "0.0.8",
-    "logs": [
-        "[27/01/2022 19:40:21] Bumped test-pypi Version 0.0.8 -> 0.0.9",
-    ]
+    "logs": []
 }
