@@ -93,7 +93,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build 
         run: |
-          python setup.py sdist bdist_wheel test-pypi
+          python setup.py sdist bdist_wheel --test-pypi
           
       - name: Publish to Test-PyPi
         env:
