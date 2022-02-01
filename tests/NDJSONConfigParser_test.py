@@ -2,7 +2,7 @@ import json
 import unittest
 from configPy import JSONConfigParser
 
-class JSONConfigParserTestCase(unittest.TestCase):
+class NDJSONConfigParserTestCase(unittest.TestCase):
 
     # Success Case - 
     # If File exists the JSONConfigParser Object should 
