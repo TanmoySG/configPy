@@ -58,6 +58,8 @@ class NDJSONConfigParser:
         for ndjsonRowNumber in range(0, len(self.ndjsonConfigurationArray)):
             self.configurations[mappingKeys[ndjsonRowNumber]] = self.ndjsonConfigurationArray[ndjsonRowNumber]
 
+        return self
+
     # Return dict object if keys are mapped to JSON Objects
     # Otherwise, return list object with NDJSON Rows
     def getConfigurations(self) -> Union[list , dict]:
