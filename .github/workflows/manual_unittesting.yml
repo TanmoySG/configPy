@@ -42,7 +42,8 @@ jobs:
       with:
           python-version: 3.7
     - name: Create Virtual Environment
-      run: 
+      run: |
+          pip install virtualenv
           virtualenv venv
     - name: Installing the Package
       run: |
@@ -53,7 +54,6 @@ jobs:
 
   build-and-test-NDJSON:
     runs-on: ubuntu-latest
-    needs: ["greet"]
     
     steps:
     - uses: actions/checkout@v2
@@ -63,7 +63,8 @@ jobs:
       with:
           python-version: 3.7
     - name: Create Virtual Environment
-      run: 
+      run: |
+          pip install virtualenv
           virtualenv venv
     - name: Installing the Package
       run: |
