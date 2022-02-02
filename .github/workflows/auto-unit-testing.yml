@@ -28,9 +28,7 @@ jobs:
           cd $GITHUB_WORKSPACE
           python -m pip install --upgrade pip
     - name: Run JSONConfigParser Test using Python-unittest
-      run:
+      run: |
           python -m unittest tests/JSONConfigParser_test.py
-    - name: Run NDJSONConfigParser Test using Python-unittest
-      run:
           python -m unittest tests/NDJSONConfigParser_test.py
         
