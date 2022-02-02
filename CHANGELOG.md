@@ -5,7 +5,7 @@
 - Improved Usability 
 - Added Wider `JSONConfigParser` Support
 - Added Support for Newline Delimited JSON files using `NDJSONConfigParser`
-- Added Support for user-defined key mapping onto JSON objects in ndjson files using `mapKeysNDJSON(mappingKeys=[...])`
+- Added Support for user-defined key mapping onto JSON objects in ndjson files using `mapKeysNDJSON()`
 
 ## v0.0.8 [Stable Build]
 
