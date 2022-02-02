@@ -1,7 +1,7 @@
 # This is a basic workflow that is triggered on push to main
 # This workflow Automates the Unit Testing
 
-name: Run tests
+name: Run Tests
 
 on:
   push:
