@@ -12,7 +12,7 @@ if "--test-pypi" in sys.argv:
     repository = "test-pypi"
     sys.argv.remove("--test-pypi")
 
-with open("README.md", "r", encoding="utf-8") as fh:
+with open("documentation.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 def getVersion(repo)->str:
