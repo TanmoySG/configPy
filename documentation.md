@@ -37,7 +37,7 @@ Use the configurations as a `dict` object.
 print("Module Name: ", configurations["module_name"])
 print("Purpose: ", configurations["purpose"])
 ```
-## Examples
+### Examples
 
 ```
 from configPy import JSONConfigParser
@@ -94,7 +94,7 @@ Using the `getConfigurations()` after using the `mapKeysNDJSON([])` method retur
 print("Dev Environment Python Version: ", importedConfigs["dev"]["version"])
 print("Stage Environment Python Version: ", importedConfigs["stage"]["version"])
 ```
-## Examples
+### Examples
 
 ```
 from configPy import NDJSONConfigParser
