@@ -80,7 +80,7 @@ print("Dev Environment Python Version: ", importedConfigs[0]["version"])
 print("Prod Environment Python Version: ", importedConfigs[2]["version"])
 ```
 
-## `mapKeysNDJSON(mappingKeys=[ ])` 
+### `mapKeysNDJSON(mappingKeys=[ ])` 
 
 While the `getCredentials()` method returns a list of JSON Objects, a user might, at times, need a specific key to access the JSON Objects. In such a use case the `mapKeysNDJSON()` provides the capability to map user-defined keys onto JSON Objects in the NDJSON Config files, that can be accessed using the key instead of index-number.
 
