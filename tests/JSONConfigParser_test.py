@@ -8,9 +8,9 @@ class JSONConfigParserTestCase(unittest.TestCase):
     # If File exists the JSONConfigParser Object should 
     # return the content of the Existing JSON Config File
     def test_JSONConfigParser_successCase(self):
-        importedConfigs = JSONConfigParser(configFilePath="./sampleConfig.json").getConfigurations()
+        importedConfigs = JSONConfigParser(configFilePath="./tests/configFiles/sampleJSONConfig.json").getConfigurations()
 
-        with open("./sampleConfig.json", "r") as IdealCaseObj:
+        with open("./tests/configFiles/sampleJSONConfig.json", "r") as IdealCaseObj:
             idealCaseConfigs = json.load(IdealCaseObj)
 
         self.assertEqual(importedConfigs, idealCaseConfigs)

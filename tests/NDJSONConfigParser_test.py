@@ -9,7 +9,7 @@ class NDJSONConfigParserTestCase(unittest.TestCase):
     # return the content of the Existing JSON Config File
     def test_NDJSONConfigParser_successCase(self):
         importedConfigs = NDJSONConfigParser(
-            configFilePath="./configFiles/sampleNDJSONConfig.ndjson").getConfigurations()
+            configFilePath="./tests/configFiles/sampleNDJSONConfig.ndjson").getConfigurations()
 
         idealCaseConfigs = [
             {"env": "dev", "language": "python", "version": 2.0},
@@ -27,7 +27,7 @@ class NDJSONConfigParserTestCase(unittest.TestCase):
                           "./configFiles/samplJSONConfig.json")
 
     def test_NDJSONConfigParser_KeyMappingCase(self):
-        importedConfigs = NDJSONConfigParser(configFilePath="./configFiles/sampleNDJSONConfig.ndjson").mapKeysNDJSON(mappingKeys=["dev","stage","prod"]).getConfigurations()
+        importedConfigs = NDJSONConfigParser(configFilePath="./tests/configFiles/sampleNDJSONConfig.ndjson").mapKeysNDJSON(mappingKeys=["dev","stage","prod"]).getConfigurations()
 
         self.assertEqual(importedConfigs["dev"]["version"], 2.0)
         self.assertEqual(importedConfigs["stage"]["env"], "stage")
