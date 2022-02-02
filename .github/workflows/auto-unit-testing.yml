@@ -7,7 +7,6 @@ on:
   push:
     branches:
       - "main"
-      - "ndjson-dev"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -31,5 +30,4 @@ jobs:
     - name: Run Tests using Python-unittest
       run:
           python -m unittest tests/JSONConfigParser_test.py
-          python -m unittest tests/NDJSONConfigParser_test.py
         
