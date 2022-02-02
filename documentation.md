@@ -82,7 +82,7 @@ print("Prod Environment Python Version: ", importedConfigs[2]["version"])
 
 ### `mapKeysNDJSON(mappingKeys=[ ])` 
 
-While the `getCredentials()` method returns a list of JSON Objects, a user might, at times, need a specific key to access the JSON Objects. In such a use case the `mapKeysNDJSON()` provides the capability to map user-defined keys onto JSON Objects in the NDJSON Config files, that can be accessed using the key instead of index-number.
+While the `getCredentials()` method returns a list of JSON Objects, a user might, at times, need a key-based access to the JSON Objects ([Refer to Issue #11](https://github.com/TanmoySG/configPy/issues/11)). In such a use case the `mapKeysNDJSON()` provides the capability to map user-defined keys onto JSON Objects in the NDJSON Config files, that can be accessed using the key instead of index-number.
 
 The `mapKeysNDJSON()` method takes an array of user defined `keys`, of length same as that of the number lines of JSON Objects in the NDJSON File. Each Key is mapped to the JSON Object of same index.
 ```
