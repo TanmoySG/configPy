@@ -47,7 +47,7 @@ jobs:
           virtualenv venv
     - name: Installing the Package
       run: |
-          python setup.py --test-pyp install
+          pip install -i https://test.pypi.org/simple/ configParsePy
     - name: Run JSON Tests
       run: | 
         python -m unittest tests/JSONConfigParser_test.py
@@ -68,7 +68,7 @@ jobs:
           virtualenv venv
     - name: Installing the Package
       run: |
-          python setup.py --test-pyp install
+          pip install -i https://test.pypi.org/simple/ configParsePy
     - name: Run NDJSON Tests
       run: | 
         python -m unittest tests/NDJSONConfigParser_test.py
