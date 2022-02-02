@@ -19,7 +19,7 @@ class JSONConfigParser:
             with open(self.configFilePath, "r") as configFileObject:
                 self.configurations = json.load(configFileObject)
         else:
-            raise FileNotFoundError("Configuration file - {0} , not found.".format(configFilePath)) 
+            raise FileNotFoundError("Configuration file {0} , not found.".format(configFilePath)) 
 
     def getConfigurations(self) -> dict:
         return self.configurations
