@@ -54,7 +54,7 @@ The whole code for the above example can be found [here](https://github.com/Tanm
 
 ## NDJSON Configuration Files
 
-NDJSON or New-line Delimited JSON are files where each line is a valid JSON Object and each line is seperated by a newline `\n`. [More about NDJSON can be found here.](http://ndjson.org/) A sample NDJSON Structure can be
+NDJSON or New-line Delimited JSON are files where each line is a valid JSON Object and each line is seperated by a newline `\n` character. [More about NDJSON can be found here.](http://ndjson.org/) A sample NDJSON Structure can be
 ```
 {"env" : "dev" , "language" : "python" , "version" : 2.0}
 {"env" : "stage" , "language" : "python" , "version" : 3.5}
