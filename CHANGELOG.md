@@ -1,6 +1,13 @@
 # Changelog
 
-## v0.0.8 [Latest Stable Build]
+## v0.1 [ Latest Stable Build ]
+
+- Improved Usability 
+- Added Wider `JSONConfigParser` Support
+- Added Support for Newline Delimited JSON files using `NDJSONConfigParser`
+- Added Support for user-defined key mapping onto JSON objects in ndjson files using 
+
+## v0.0.8 [Stable Build]
 
 Improved usability and importability from v0.0.7
 
