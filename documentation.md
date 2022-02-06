@@ -70,19 +70,19 @@ Initiate the `NDJSONConfigParser` by passing the configuration file as an argume
 ```
 configObject = NDJSONConfigParser(configFilePath="./sampleConfig.ndjson")
 ```
-Use `getConfigurations()` method to get the Imported Configuration. `The getConfigurations()` method returns the configurations as a Dictionary.
+Use `getConfigurations()` method to get the Imported Configuration. `The getConfigurations()` method returns the configurations as a Dictionary with Index as Keys (```{0:{},1:{},2:{},...}```, similar to ```[{Index 0}, {Index 1}, ...]```) , for simillar usage as a List/Array (Refer to Issue [#17](https://github.com/TanmoySG/configPy/issues/17)).
 ```
 configurations = configObject.getConfigurations()
 ```
-Use the configurations as a `list` object with each JSON Object as a member of the list and can be accessed using the index number.
+Use the configurations as a dictionary with each JSON Object as a member of the dict and can be accessed using the index-number as the key and can be used simillar to using a List Object.
 ```
-print("Dev Environment Python Version: ", importedConfigs[0]["version"])
-print("Prod Environment Python Version: ", importedConfigs[2]["version"])
+print("Dev Environment Python Version: ", configurations[0]["version"])
+print("Prod Environment Python Version: ", configurations[2]["version"])
 ```
 
 ### `mapKeysNDJSON(mappingKeys=[ ])` 
 
-While the `getCredentials()` method returns a list of JSON Objects, a user might, at times, need a key-based access to the JSON Objects ([Refer to Issue #11](https://github.com/TanmoySG/configPy/issues/11)). In such a use case the `mapKeysNDJSON()` provides the capability to map user-defined keys onto JSON Objects in the NDJSON Config files, that can be accessed using the key instead of index-number.
+While the `getCredentials()` method returns a dictionary of JSON Objects that can be accessed using Index as Key, a user might, at times, need a key-based access to the JSON Objects (Refer to Issue [#11](https://github.com/TanmoySG/configPy/issues/11) and [#17](https://github.com/TanmoySG/configPy/issues/17)). In such a use case the `mapKeysNDJSON()` provides the capability to map user-defined keys onto JSON Objects in the NDJSON Config files, that can be accessed using the user-assigned key instead of index-numbers.
 
 The `mapKeysNDJSON()` method takes an array of user defined `keys`, of length same as that of the number lines of JSON Objects in the NDJSON File. Each Key is mapped to the JSON Object of same index.
 ```
@@ -91,8 +91,8 @@ configurations = configObject.mapKeysNDJSON(mappingKeys=["dev","stage","prod"]).
 ```
 Using the `getConfigurations()` after using the `mapKeysNDJSON([])` method returns a `dict` object instead of a list. The imported configurations can be used by their mapped keys.
 ```
-print("Dev Environment Python Version: ", importedConfigs["dev"]["version"])
-print("Stage Environment Python Version: ", importedConfigs["stage"]["version"])
+print("Dev Environment Python Version: ", configurations["dev"]["version"])
+print("Stage Environment Python Version: ", configurations["stage"]["version"])
 ```
 ### Examples
 

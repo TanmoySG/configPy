@@ -135,3 +135,4 @@ examples/configPy/txtConfigParser.py
 examples/configPy/ndjsonConfigParser.py
 examples/configPy/jsonConfigParser.py
 examples/configPy/__init__.py
+.vscode/settings.json

@@ -11,11 +11,11 @@ class NDJSONConfigParserTestCase(unittest.TestCase):
         importedConfigs = NDJSONConfigParser(
             configFilePath="./tests/configFiles/sampleNDJSONConfig.ndjson").getConfigurations()
 
-        idealCaseConfigs = [
-            {"env": "dev", "language": "python", "version": 2.0},
-            {"env": "stage", "language": "python", "version": 3.5},
-            {"env": "prod", "language": "python", "version": 3.9}
-        ]
+        idealCaseConfigs = {
+            0: {"env": "dev", "language": "python", "version": 2.0},
+            1: {"env": "stage", "language": "python", "version": 3.5},
+            2: {"env": "prod", "language": "python", "version": 3.9}
+        }
 
         self.assertEqual(importedConfigs, idealCaseConfigs)
 
@@ -27,7 +27,8 @@ class NDJSONConfigParserTestCase(unittest.TestCase):
                           "./configFiles/samplJSONConfig.json")
 
     def test_NDJSONConfigParser_KeyMappingCase(self):
-        importedConfigs = NDJSONConfigParser(configFilePath="./tests/configFiles/sampleNDJSONConfig.ndjson").mapKeysNDJSON(mappingKeys=["dev","stage","prod"]).getConfigurations()
+        filePath = "./tests/configFiles/sampleNDJSONConfig.ndjson"
+        importedConfigs = NDJSONConfigParser(configFilePath=filePath).mapKeysNDJSON(mappingKeys=["dev", "stage", "prod"]).getConfigurations()
 
         self.assertEqual(importedConfigs["dev"]["version"], 2.0)
         self.assertEqual(importedConfigs["stage"]["env"], "stage")
