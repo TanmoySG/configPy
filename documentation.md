@@ -70,7 +70,7 @@ Initiate the `NDJSONConfigParser` by passing the configuration file as an argume
 ```
 configObject = NDJSONConfigParser(configFilePath="./sampleConfig.ndjson")
 ```
-Use `getConfigurations()` method to get the Imported Configuration. `The getConfigurations()` method returns the configurations as a Dictionary with Index as Keys (```{0:{},1:{},2:{},...}```) for ease of use as a List/Array (```[{},{},{},...]```).
+Use `getConfigurations()` method to get the Imported Configuration. `The getConfigurations()` method returns the configurations as a Dictionary with Index as Keys (```{0:{},1:{},2:{},...}```, similar to ```[{Index 0}, {Index 1}, ...]```) , for simillar uasge as a List/Array (Refer to Issue [#17](https://github.com/TanmoySG/configPy/issues/17)).
 ```
 configurations = configObject.getConfigurations()
 ```
