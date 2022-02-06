@@ -76,8 +76,8 @@ configurations = configObject.getConfigurations()
 ```
 Use the configurations as a dictionary with each JSON Object as a member of the dict and can be accessed using the index-number as the key and can be used simillar to using a List Object.
 ```
-print("Dev Environment Python Version: ", importedConfigs[0]["version"])
-print("Prod Environment Python Version: ", importedConfigs[2]["version"])
+print("Dev Environment Python Version: ", configurations[0]["version"])
+print("Prod Environment Python Version: ", configurations[2]["version"])
 ```
 
 ### `mapKeysNDJSON(mappingKeys=[ ])` 
@@ -91,8 +91,8 @@ configurations = configObject.mapKeysNDJSON(mappingKeys=["dev","stage","prod"]).
 ```
 Using the `getConfigurations()` after using the `mapKeysNDJSON([])` method returns a `dict` object instead of a list. The imported configurations can be used by their mapped keys.
 ```
-print("Dev Environment Python Version: ", importedConfigs["dev"]["version"])
-print("Stage Environment Python Version: ", importedConfigs["stage"]["version"])
+print("Dev Environment Python Version: ", configurations["dev"]["version"])
+print("Stage Environment Python Version: ", configurations["stage"]["version"])
 ```
 ### Examples
 
