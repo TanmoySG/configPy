@@ -1,41 +1,43 @@
-import json
+import json, csv
 import os
 
 # Check if File Exists
 def ifFileExists(filePath) -> bool:
     return os.path.exists(filePath)
 
-# Reader Method for NDJSON Files. Returns list of JSON-Objects.
-def ndjsonReader(filePath)-> list:
+# Reader Method for CSV Files. Returns Dict of JSON-Objects.
+def csvReader(filePath)-> dict:
 
-    with open(filePath, "r") as ndjsonFileObject:
+    with open(filePath, "r") as csvFileObject:
+        # Read CSV as OrderedDict Objects
+        csvFileDataObjects = csv.DictReader(csvFileObject)
 
-        # Parse NDJSON File
-        ndjsonFileData = ndjsonFileObject.read().split("\n")
+    # Returned CSV File Data Object
+    csvFileData = {}
 
-    for JSONStringIndex in range(0, len(ndjsonFileData)):
+    # Index number for CSV Rows
+    csvRowIndex = 0
+
+    for csvRowDataObject in csvFileDataObjects:
 
         # Convert String into JSON
-        convertedJSONLine = json.loads(ndjsonFileData[JSONStringIndex])
+        csvFileData[csvRowIndex] = dict(csvRowDataObject)
 
-        # Replace JSON String by JSON Object
-        ndjsonFileData[JSONStringIndex] = convertedJSONLine
-
-    return ndjsonFileData
+    return csvFileData
 
 
-# NDJSONConfigParser Class - for Newline-Delimited JSON Files
+# CSVConfigParser Class - for Comma-Separated Variable (CSV) Files
 class CSVConfigParser:
 
-    # init method to initialize NDJSONConfigParser 
+    # init method to initialize CSVConfigParser 
     # with file path when an object is created.
     def __init__(self, configFilePath) -> None:
         if ifFileExists(configFilePath):
             self.configFilePath = configFilePath
 
-            # A Dictionary of separate JSON Objects is returned for NDJsonConfigParser. 
+            # A Dictionary of separate JSON Objects is returned for CSVConfigParser. 
             # Converting the List of JSON, to dictionary with Index of JSON Object as Key.
-            self.configurations = dict(enumerate(ndjsonReader(configFilePath)))
+            self.configurations = dict(enumerate(csvReader(configFilePath)))
 
         else:
             raise FileNotFoundError("Configuration file {0} , not found.".format(configFilePath)) 
