@@ -8,20 +8,22 @@ def ifFileExists(filePath) -> bool:
 # Reader Method for CSV Files. Returns Dict of JSON-Objects.
 def csvReader(filePath)-> dict:
 
+    # Returned CSV File Data Object
+    csvFileData = {}
+
     with open(filePath, "r") as csvFileObject:
         # Read CSV as OrderedDict Objects
         csvFileDataObjects = csv.DictReader(csvFileObject)
 
-    # Returned CSV File Data Object
-    csvFileData = {}
+        # Index number for CSV Rows
+        csvRowIndex = 0
 
-    # Index number for CSV Rows
-    csvRowIndex = 0
+        for csvRowDataObject in csvFileDataObjects:
+            # Add CSV row to JSON with Index Number
+            csvFileData[csvRowIndex] = dict(csvRowDataObject)
 
-    for csvRowDataObject in csvFileDataObjects:
-
-        # Convert String into JSON
-        csvFileData[csvRowIndex] = dict(csvRowDataObject)
+            # Increment Index
+            csvRowIndex+=1
 
     return csvFileData
 
@@ -37,13 +39,13 @@ class CSVConfigParser:
 
             # A Dictionary of separate JSON Objects is returned for CSVConfigParser. 
             # Converting the List of JSON, to dictionary with Index of JSON Object as Key.
-            self.configurations = dict(enumerate(csvReader(configFilePath)))
+            self.configurations = csvReader(configFilePath)
 
         else:
             raise FileNotFoundError("Configuration file {0} , not found.".format(configFilePath)) 
 
 
-    def mapKeysNDJSON(self, mappingKeys) -> dict:
+    def mapKeys(self, mappingKeys) -> dict:
 
         # Raise IndexError if Length of configuration 
         # array and number of mapping keys do not match
