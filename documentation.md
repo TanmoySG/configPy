@@ -80,16 +80,16 @@ print("Dev Environment Python Version: ", configurations[0]["version"])
 print("Prod Environment Python Version: ", configurations[2]["version"])
 ```
 
-### `mapKeysNDJSON(mappingKeys=[ ])` 
+### `mapKeys(mappingKeys=[ ])` 
 
-While the `getCredentials()` method returns a dictionary of JSON Objects that can be accessed using Index as Key, a user might, at times, need a key-based access to the JSON Objects (Refer to Issue [#11](https://github.com/TanmoySG/configPy/issues/11) and [#17](https://github.com/TanmoySG/configPy/issues/17)). In such a use case the `mapKeysNDJSON()` provides the capability to map user-defined keys onto JSON Objects in the NDJSON Config files, that can be accessed using the user-assigned key instead of index-numbers.
+While the `getCredentials()` method returns a dictionary of JSON Objects that can be accessed using Index as Key, a user might, at times, need a key-based access to the JSON Objects (Refer to Issue [#11](https://github.com/TanmoySG/configPy/issues/11) and [#17](https://github.com/TanmoySG/configPy/issues/17)). In such a use case the `mapKeys()` provides the capability to map user-defined keys onto JSON Objects in the NDJSON Config files, that can be accessed using the user-assigned key instead of index-numbers.
 
-The `mapKeysNDJSON()` method takes an array of user defined `keys`, of length same as that of the number lines of JSON Objects in the NDJSON File. Each Key is mapped to the JSON Object of same index.
+The `mapKeys()` method takes an array of user defined `keys`, of length same as that of the number lines of JSON Objects in the NDJSON File. Each Key is mapped to the JSON Object of same index.
 ```
 configObject = NDJSONConfigParser(configFilePath="./sampleNDJSONConfig.ndjson")
-configurations = configObject.mapKeysNDJSON(mappingKeys=["dev","stage","prod"]).getConfigurations()
+configurations = configObject.mapKeys(mappingKeys=["dev","stage","prod"]).getConfigurations()
 ```
-Using the `getConfigurations()` after using the `mapKeysNDJSON([])` method returns a `dict` object instead of a list. The imported configurations can be used by their mapped keys.
+Using the `getConfigurations()` after using the `mapKeys([])` method returns a `dict` object instead of a list. The imported configurations can be used by their mapped keys.
 ```
 print("Dev Environment Python Version: ", configurations["dev"]["version"])
 print("Stage Environment Python Version: ", configurations["stage"]["version"])
@@ -106,7 +106,7 @@ print("Sample NDJSONConfigParser Test")
 print("Dev Environment Python Version: ", importedConfigs[0]["version"])
 print("Prod Environment Python Version: ", importedConfigs[2]["version"])
 
-importedConfigs = NDJSONConfigParser(configFilePath="./configFiles/sampleNDJSONConfig.ndjson").mapKeysNDJSON(mappingKeys=["dev","stage","prod"]).getConfigurations()
+importedConfigs = NDJSONConfigParser(configFilePath="./configFiles/sampleNDJSONConfig.ndjson").mapKeys(mappingKeys=["dev","stage","prod"]).getConfigurations()
 
 print("Sample NDJSONConfigParser with Key Mapping Test")
 
