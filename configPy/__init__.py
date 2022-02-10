@@ -6,3 +6,6 @@ from configPy.txtConfigParser import TXTConfigParser
 
 # NDJSONConfigParser - Newline Delimited JSON config Parser Object
 from configPy.ndjsonConfigParser import NDJSONConfigParser
+
+# CSVConfigParser - CSV config Parser Object
+from configPy.csvConfigParser import CSVConfigParser
