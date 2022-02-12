@@ -50,15 +50,15 @@ class CSVConfigParser:
         # Raise IndexError if Length of configuration 
         # array and number of mapping keys do not match
         if len(self.configurations.keys()) != len(mappingKeys):
-            raise IndexError(f"Length of Mapping Keys Array ({len(mappingKeys)}) and NDJSON Objects ({len(self.configurations)}) do not match")
+            raise IndexError(f"Length of Mapping Keys Array ({len(mappingKeys)}) and CSV Objects ({len(self.configurations)}) do not match")
 
         # Map user-defined Keys to JSON Objects and assign to configurations variable
-        for ndjsonRowNumber in self.configurations.keys():
-            self.configurations[mappingKeys[ndjsonRowNumber]] = self.configurations.pop(ndjsonRowNumber)
+        for csvRowNumber in self.configurations.keys():
+            self.configurations[mappingKeys[csvRowNumber]] = self.configurations.pop(csvRowNumber)
 
         return self
 
     # Return dict object if keys are mapped to JSON Objects
-    # Otherwise, return list object with NDJSON Rows
+    # Otherwise, return list object with CSV Rows
     def getConfigurations(self) -> dict:
         return self.configurations
