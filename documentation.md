@@ -20,11 +20,11 @@ from configPy import JSONConfigParser
 
 ## Methods
 
-### `getConfigurations()` 
+### getConfigurations()
 
 The `getConfigurations()` method is used to get the Parsed Configurations from the config files. It is common for all configParser Objects.
 
-For multi-rowed filetypes like CSV, NDJSON -The `getConfigurations()` method returns the configurations as a Dictionary with Index as Keys (```{0:{},1:{},2:{},...}```, similar to ```[{Index 0}, {Index 1}, ...]```) , for simillar usage as a List/Array (Refer to Issue [#17](https://github.com/TanmoySG/configPy/issues/17)).
+For multi-rowed filetypes like CSV, NDJSON -The `getConfigurations()` method returns the configurations as a Dictionary with Index as Keys ({0:{},1:{},2:{},...} similar to [{Index 0}, {Index 1}, ...]) , for simillar usage as a List/Array (Refer to Issue [#17](https://github.com/TanmoySG/configPy/issues/17)).
 
 ```
 configs = [FILETYPE]ConfigParser("[filename]").getConfigurations()
