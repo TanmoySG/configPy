@@ -28,7 +28,7 @@ class NDJSONConfigParserTestCase(unittest.TestCase):
 
     def test_NDJSONConfigParser_KeyMappingCase(self):
         filePath = "./tests/configFiles/sampleNDJSONConfig.ndjson"
-        importedConfigs = NDJSONConfigParser(configFilePath=filePath).mapKeysNDJSON(mappingKeys=["dev", "stage", "prod"]).getConfigurations()
+        importedConfigs = NDJSONConfigParser(configFilePath=filePath).mapKeys(mappingKeys=["dev", "stage", "prod"]).getConfigurations()
 
         self.assertEqual(importedConfigs["dev"]["version"], 2.0)
         self.assertEqual(importedConfigs["stage"]["env"], "stage")
