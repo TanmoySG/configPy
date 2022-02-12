@@ -13,12 +13,25 @@ pip install configParsePy
 
 Use configPy to get your configurations imported to your python code from a configuration File.
 
-Import the `configPy` module or its member methods to hadle different types of configuration files.
+Import the `configPy` module or its member methods to handle different types of configuration files.
 ```
 from configPy import JSONConfigParser 
 ```
-[Get the detailed documentation of usinf configPy here.](./documentation.md)
+[Get the detailed documentation of using configPy here.](./documentation.md)
 
 ## Examples
 
 Usage Samples can be found in the [examples directory](./examples)
+
+## Supports 
+
+- [ ] JSON
+- [ ] NDJSON
+- [ ] CSV
+- [ ] TSV
+- [ ] CONF
+- [ ] ENV
+
+And working on more!
+
+<!-- ## Features - Coming Soon-->
