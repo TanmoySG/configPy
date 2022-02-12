@@ -33,4 +33,5 @@ jobs:
       run: |
           python -m unittest tests/JSONConfigParser_test.py
           python -m unittest tests/NDJSONConfigParser_test.py
+          python -m unittest tests/CSVConfigParser_test.py
         
