@@ -25,9 +25,9 @@ Usage Samples can be found in the [examples directory](./examples)
 
 ## Supports 
 
-- [ ] JSON
-- [ ] NDJSON
-- [ ] CSV
+- [x] JSON
+- [x] NDJSON
+- [x] CSV
 - [ ] TSV
 - [ ] CONF
 - [ ] ENV
