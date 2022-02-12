@@ -131,8 +131,6 @@ dmypy.json
 # WF
 
 .pypirc
-examples/configPy/txtConfigParser.py
-examples/configPy/ndjsonConfigParser.py
-examples/configPy/jsonConfigParser.py
-examples/configPy/__init__.py
+examples/configPy/*
+tests/configPy/*
 .vscode/settings.json

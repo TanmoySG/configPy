@@ -40,8 +40,8 @@ class NDJSONConfigParser:
         else:
             raise FileNotFoundError("Configuration file {0} , not found.".format(configFilePath)) 
 
-
-    def mapKeysNDJSON(self, mappingKeys) -> dict:
+    # Returns Dict with Mapped Keys
+    def mapKeys(self, mappingKeys) -> dict:
 
         # Raise IndexError if Length of configuration 
         # array and number of mapping keys do not match
